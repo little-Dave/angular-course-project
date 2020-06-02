@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'course-project';
+  activeComponent = "recipes";
+
+  display(componentToDisplay: string) {
+    this.activeComponent = componentToDisplay;
+  }
 }
+ 
