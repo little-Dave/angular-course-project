@@ -6,7 +6,6 @@ import { ShoppingListService } from './shopping-list.service';
 @Component({
   selector: 'app-shopping-list',
   templateUrl: './shopping-list.component.html',
-  providers: [ShoppingListService]
 })
 
 export class ShoppingListComponent implements OnInit {
