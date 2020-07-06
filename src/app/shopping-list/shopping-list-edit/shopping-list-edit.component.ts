@@ -15,11 +15,13 @@ export class ShoppingListEditComponent {
   
   constructor(private shoppingListService: ShoppingListService) {}
 
-  addItem() {
-    this.shoppingListService.ingredients.push({
-      name: this.nameInput.nativeElement.value,
-      amount: this.amountInput.nativeElement.value
-    });
+  onAddItem() {
+    this.shoppingListService.addItem(
+      new Ingredient(
+        this.nameInput.nativeElement.value,
+        this.amountInput.nativeElement.value
+      )
+    );
   }
 
 }

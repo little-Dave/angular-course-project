@@ -7,4 +7,9 @@ export class ShoppingListService {
     new Ingredient("tomotoes", 3)
   ];
   
+
+  addItem(newIngredient: Ingredient) {
+    this.ingredients.push(newIngredient);
+  }
+  
 }
