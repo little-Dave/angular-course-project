@@ -18,3 +18,7 @@ export class RecipeDetailComponent {
     this.shoppingListService.addRecipeItems(this.recipe.ingredients);
   }
 }
+
+// utilized ShoppingListService directly, here. Could instead have created a method in 
+// RecipesService, which would be called here, injected ShoppingListService there 
+// and called its addRecipeItems method from there

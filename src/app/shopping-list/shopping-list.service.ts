@@ -14,14 +14,18 @@ export class ShoppingListService {
     return this.ingredients.slice();
   }
 
-  addItem(newIngredient: Ingredient) {
-    this.ingredients.push(newIngredient);
+  emitUpdate() {
     this.ingredientsChanged.emit(this.ingredients.slice());
   }
 
+  addItem(newIngredient: Ingredient) {
+    this.ingredients.push(newIngredient);
+    this.emitUpdate();
+  }
+
   addRecipeItems(ingredients: Ingredient[]) {
-    this.ingredients = [...this.ingredients, ...ingredients];
-    this.ingredientsChanged.emit(this.ingredients.slice());
+    this.ingredients.push(...ingredients);
+    this.emitUpdate();
   }
 
 }
