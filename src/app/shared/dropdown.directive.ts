@@ -1,5 +1,4 @@
 import { Directive, OnInit, HostListener, HostBinding } from '@angular/core';
-import { element } from 'protractor';
 
 @Directive({
   selector: "[appDropdown]"
