@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
 
 
 @Component({
@@ -7,9 +7,5 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 
 export class HeaderComponent {
-  @Output() activateComponent = new EventEmitter<string>();
 
-  setAsActive(componentToDisplay: string) {
-    this.activateComponent.emit(componentToDisplay);
-  }
 } 
